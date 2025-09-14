@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 400 100">
+  <!-- Background -->
+  <rect width="400" height="100" fill="none"/>
+  
+  <!-- Circle with lightning-like symbol -->
+  <circle cx="50" cy="50" r="35" fill="#ffffff"/>
+  <polygon points="45,25 60,50 50,50 55,75 40,50 50,50" fill="#2C2C2C"/>
+  
+  <!-- Text -->
+  <text x="110" y="58" font-family="Poppins, Arial, sans-serif" font-size="40" font-weight="600" fill="#ffffff">
+    Nestle@
+  </text>
+</svg>
