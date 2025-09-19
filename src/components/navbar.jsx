@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { assets } from '../assets/assets'
 
 const Navbar = () => {
@@ -14,7 +15,14 @@ const Navbar = () => {
                 <a href="#Projects" className='cursor-pointer hover:text-gray-400'>Projects</a>
                 <a href="#Testimonials" className='cursor-pointer hover:text-gray-400'>Testimonials</a>
             </ul>
-            <button className='hidden md:block bg-white px-6 lg:px-8 py-2 rounded-full text-sm lg:text-base'>Sign Up</button>
+            <div className='hidden md:flex gap-3'>
+                <Link to="/login" className='bg-transparent border border-white text-white px-6 lg:px-8 py-2 rounded-full text-sm lg:text-base hover:bg-white hover:text-blue-600 transition duration-200'>
+                    Login
+                </Link>
+                <Link to="/signup" className='bg-white text-blue-600 px-6 lg:px-8 py-2 rounded-full text-sm lg:text-base hover:bg-gray-100 transition duration-200'>
+                    Sign Up
+                </Link>
+            </div>
             <img onClick={() => SetShowMobileMenu(true)} src={assets.menu_icon} className='md:hidden w-9 cursor-pointer' alt="" />
         </div>
         {/*-------- mobile-menue--------------*/}
@@ -28,6 +36,22 @@ const Navbar = () => {
                 <a onClick={() => SetShowMobileMenu(false)} href="#Projects" className='px-4 py-2 rounded-full inline-block '>Projects</a>
                 <a onClick={() => SetShowMobileMenu(false)} href="#Testimonials" className='px-4 py-2 rounded-full inline-block '>Testimonials</a>
             </ul>
+            <div className='flex flex-col items-center gap-3 mt-6 px-5'>
+                <Link 
+                    onClick={() => SetShowMobileMenu(false)} 
+                    to="/login" 
+                    className='w-full bg-blue-600 text-white px-6 py-3 rounded-full text-center hover:bg-blue-700 transition duration-200'
+                >
+                    Login
+                </Link>
+                <Link 
+                    onClick={() => SetShowMobileMenu(false)} 
+                    to="/signup" 
+                    className='w-full bg-transparent border border-blue-600 text-blue-600 px-6 py-3 rounded-full text-center hover:bg-blue-600 hover:text-white transition duration-200'
+                >
+                    Sign Up
+                </Link>
+            </div>
         </div>
     </div>
   )
